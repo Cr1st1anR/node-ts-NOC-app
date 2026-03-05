@@ -18,16 +18,24 @@ async function main() {
         dbName: envs.MONGO_DB_NAME,
     });
 
-    const prisma = new PrismaClient();
-    const newLog = await prisma.logModel.create({
-        data: {
-            level: 'HIGH',
-            message: 'Test message',
-            origin: 'App.ts',
-        }
-    });
+    // const prisma = new PrismaClient();
+    //crear
+    // const newLog = await prisma.logModel.create({
+    //     data: {
+    //         level: 'HIGH',
+    //         message: 'Test message',
+    //         origin: 'App.ts',
+    //     }
+    // });
 
-    console.log({newLog});
+    //obtener
+    // const logs = await prisma.logModel.findMany(
+    //     {where: {
+    //         level: 'MEDIUM',
+    //     }}
+    // );
+
+    // console.log(logs);
 
 
     //Crear un colección = tables, documento = registro
@@ -43,5 +51,5 @@ async function main() {
     // console.log(logs);
 
 
-    // Server.start();
+    Server.start();
 }
