@@ -3,6 +3,7 @@ import path from "path";
 import { FileSystemDatasource } from './file-system.datasource';
 import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity';
 import { LogDatasource } from '../../domain/datasources/log.datasource';
+import { error } from 'console';
 
 
 
@@ -110,6 +111,32 @@ describe('FileSystemDatasource', () => {
         expect(logsHigh).toEqual(expect.arrayContaining([logHigh]));
 
     });
+
+
+    test('should not throw an error if path exists', () => {
+
+        new FileSystemDatasource();
+        new FileSystemDatasource();
+
+        expect(true).toBeTruthy();
+    })
+
+
+    test('should throw an error if severity level is not defined', async () => {
+
+        const LogDatasource = new FileSystemDatasource();
+        const customSeverityLevel = 'SUPER_MEGA_HIGH' as LogSeverityLevel;
+
+        try {
+            await LogDatasource.getLogs(customSeverityLevel);
+            expect(true).toBeFalsy();
+        } catch (error) {
+            const errorString = `${error}`;
+            console.log(errorString);
+
+            expect(errorString).toContain(`${customSeverityLevel} not implemented`);
+        }
+    })
 
 
 })
