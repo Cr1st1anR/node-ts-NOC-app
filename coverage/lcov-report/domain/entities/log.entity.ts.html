@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75.43% </span>
+                <span class="strong">87.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>43/57</span>
+                <span class='fraction'>50/57</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75.43% </span>
+                <span class="strong">87.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>43/57</span>
+                <span class='fraction'>50/57</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -142,13 +142,29 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -158,22 +174,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
 &nbsp;
@@ -206,30 +206,30 @@ export class LogEntity {
 &nbsp;
     }
     //"{ "level": "high", "message":"Hola Mundo","createdAt":"12CX0950945945090549" }"
-    static fromJson = <span class="fstat-no" title="function not covered" >(json: string): LogEntity =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        json = (json === '') ? '{}' : json;</span>
-<span class="cstat-no" title="statement not covered" >        </span>
-<span class="cstat-no" title="statement not covered" >        const { message, level, createdAt, origin } = JSON.parse(json);</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        const log = new LogEntity({</span>
-<span class="cstat-no" title="statement not covered" >            message,</span>
-<span class="cstat-no" title="statement not covered" >            level,</span>
-<span class="cstat-no" title="statement not covered" >            createdAt: new Date(createdAt),</span>
-<span class="cstat-no" title="statement not covered" >            origin,</span>
-<span class="cstat-no" title="statement not covered" >        });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        return log;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    };</span>
+    static fromJson = (json: string): LogEntity =&gt; {
+        json = (json === '') ? '{}' : json;
+        
+        const { message, level, createdAt, origin } = JSON.parse(json);
 &nbsp;
-    static fromObject = (object: { [key: string]: any }): LogEntity =&gt; {
-        const { message, level, createdAt, origin } = object;
         const log = new LogEntity({
-            message, level, createdAt, origin
+            message,
+            level,
+            createdAt: new Date(createdAt),
+            origin,
         });
 &nbsp;
         return log;
-    }
+&nbsp;
+    };
+&nbsp;
+    static fromObject = <span class="fstat-no" title="function not covered" >(object: { [key: string]: any }): LogEntity =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        const { message, level, createdAt, origin } = object;</span>
+<span class="cstat-no" title="statement not covered" >        const log = new LogEntity({</span>
+<span class="cstat-no" title="statement not covered" >            message, level, createdAt, origin</span>
+<span class="cstat-no" title="statement not covered" >        });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return log;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
 &nbsp;
 }</pre></td></tr></table></pre>
 
@@ -238,7 +238,7 @@ export class LogEntity {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-03-22T05:03:58.258Z
+                at 2026-03-22T20:34:53.444Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
